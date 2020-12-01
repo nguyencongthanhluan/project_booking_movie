@@ -90,7 +90,7 @@ class Header extends Component {
                   <>
                     <li className="nav-item">
                       <NavLink to="/signin" className="header_login" href="#">
-                        <img src="./image/login.png" className="login" />
+                        <img src="/image/login.png" className="login" />
                         Đăng nhập /
                       </NavLink>
                     </li>
