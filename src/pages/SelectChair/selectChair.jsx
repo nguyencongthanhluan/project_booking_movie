@@ -112,7 +112,7 @@ const SelectChair = (props) => {
               </div>
               <div className="screens">
                 <div className="screens_name">
-                  <img src="./image/screen.png" />
+                  <img src="/image/screen.png" />
                 </div>
                 <div
                   className="screens_chairlist"
