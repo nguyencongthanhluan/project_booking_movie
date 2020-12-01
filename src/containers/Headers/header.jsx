@@ -12,28 +12,26 @@ class Header extends Component {
       .logOut(values)
       .then((res) => {
         console.log(res);
-        localStorage.removeItem("credential")
+        localStorage.removeItem("credential");
       })
       .catch((err) => {
         console.log(err.response.data);
       });
   };
-  _handleLogOut= (event) => {
-    event.preventDefault()
+  _handleLogOut = (event) => {
+    event.preventDefault();
     // Remove the token from localStorage
-    localStorage.removeItem("credential")
+    localStorage.removeItem("credential");
     // Remove the user object from the Redux store
-    this.props.dispatch(
-      createAction("LOGOUT_USER")
-    )
-  }
+    this.props.dispatch(createAction("LOGOUT_USER"));
+  };
   render() {
     return (
       <div className="header">
         <div className="header_content">
           <nav className="navbar navbar-expand-md">
             <NavLink to="/home" className="navbar-brand" href="#">
-              <img src="./image/web-logo.png" className="logo" />
+              <img src="/image/web-logo.png" className="logo" />
             </NavLink>
             <button
               className="navbar-toggler bg-dark navbar-dark"
@@ -78,22 +76,20 @@ class Header extends Component {
                       <span>Hi, {this.props.credentials.hoTen}</span>
                     </li>
                     <div className="dropdown-menu">
-                    {this.props.credentials.hoTen
-                        ? <button
-                        className="dropdown-item"
-                        onClick={this._handleLogOut}
-                      >
-                        Đăng xuất
-                      </button>
-                        : null
-                      }
-                      
+                      {this.props.credentials.hoTen ? (
+                        <button
+                          className="dropdown-item"
+                          onClick={this._handleLogOut}
+                        >
+                          Đăng xuất
+                        </button>
+                      ) : null}
                     </div>
                   </div>
                 ) : (
                   <>
                     <li className="nav-item">
-                      <NavLink to="/signin" className="header_login" href="#" >
+                      <NavLink to="/signin" className="header_login" href="#">
                         <img src="./image/login.png" className="login" />
                         Đăng nhập /
                       </NavLink>
@@ -114,15 +110,13 @@ class Header extends Component {
     );
   }
   componentDidMount = () => {
-    this.removeCredentialsFromLocal()
-  }
+    this.removeCredentialsFromLocal();
+  };
 }
 const mapStateToProps = (state) => {
   return {
     credentials: state.user.thongTinDangNhap,
-   
   };
 };
-
 
 export default connect(mapStateToProps)(Header);

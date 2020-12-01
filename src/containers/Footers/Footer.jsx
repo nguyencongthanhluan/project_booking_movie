@@ -32,18 +32,18 @@ class Footer extends Component {
                   <a href="https://www.cgv.vn/" title="CGV">
                     <img
                       className="iconConnect"
-                      src="./image/cgv.png"
+                      src="/image/cgv.png"
                       style={{ backgroundColor: "#fff" }}
                     />
                   </a>
                   <a href="http://bhdstar.vn" title="BHD">
-                    <img className="iconConnect" src="./image/bhd.png" />
+                    <img className="iconConnect" src="/image/bhd.png" />
                   </a>
                   <a href="http://galaxycine.vn" title="Galaxy">
-                    <img className="iconConnect" src="./image/galaxycine.png" />
+                    <img className="iconConnect" src="/image/galaxycine.png" />
                   </a>
                   <a href="http://cinestar.com.vn" title="Cinestar">
-                    <img className="iconConnect" src="./image/cinestar.png" />
+                    <img className="iconConnect" src="/image/cinestar.png" />
                   </a>
                   <a href="http://lottecinemavn.com" title="Lotte Cinema">
                     <img
@@ -54,62 +54,59 @@ class Footer extends Component {
                 </div>
                 <div className="row col-sm-12 col-xs-12 linePartner">
                   <a href="https://www.megagscinemas.vn" title="MegaGS">
-                    <img className="iconConnect" src="./image/megags.png" />
+                    <img className="iconConnect" src="/image/megags.png" />
                   </a>
                   <a href="https://www.betacineplex.vn/" title="Beta">
-                    <img className="iconConnect" src="./image/bt.jpg" />
+                    <img className="iconConnect" src="/image/bt.jpg" />
                   </a>
                   <a href="http://ddcinema.vn" title="DDC">
                     <img
                       className="iconConnect"
-                      src="./image/dongdacinema.png"
+                      src="/image/dongdacinema.png"
                     />
                   </a>
                   <a href="https://touchcinema.com/" title="Touch Cinema">
-                    <img className="iconConnect" src="./image/TOUCH.png" />
+                    <img className="iconConnect" src="/image/TOUCH.png" />
                   </a>
                   <a href="https://cinemaxvn.com/" title="Cinemax">
-                    <img className="iconConnect" src="./image/cnx.jpg" />
+                    <img className="iconConnect" src="/image/cnx.jpg" />
                   </a>
                 </div>
                 <div className="row col-sm-12 col-xs-12 linePartner">
                   <a href="http://starlight.vn/" title="Starlight">
-                    <img className="iconConnect" src="./image/STARLIGHT.png" />
+                    <img className="iconConnect" src="/image/STARLIGHT.png" />
                   </a>
                   <a href="https://www.dcine.vn/" title="Dcine">
-                    <img className="iconConnect" src="./image/dcine.png" />
+                    <img className="iconConnect" src="/image/dcine.png" />
                   </a>
                   <a href="https://zalopay.vn/" title="ZaloPay">
                     <img
                       className="iconConnect"
-                      src="./image/zalopay_icon.png"
+                      src="/image/zalopay_icon.png"
                     />
                   </a>
                   <a href="https://www.payoo.vn/" title="Payoo">
-                    <img className="iconConnect" src="./image/payoo.jpg" />
+                    <img className="iconConnect" src="/image/payoo.jpg" />
                   </a>
                   <a href="https://www.vietcombank.com.vn/" title="Vietcombank">
-                    <img className="iconConnect" src="./image/VCB.png" />
+                    <img className="iconConnect" src="/image/VCB.png" />
                   </a>
                 </div>
                 <div className="row col-sm-12 col-xs-12 linePartner">
                   <a href="http://www.agribank.com.vn/" title="Agribank">
-                    <img className="iconConnect" src="./image/AGRIBANK.png" />
+                    <img className="iconConnect" src="/image/AGRIBANK.png" />
                   </a>
                   <a href="https://www.vietinbank.vn/" title="Vietinbank">
-                    <img
-                      className="iconConnect"
-                      src="./image/VIETTINBANK.png"
-                    />
+                    <img className="iconConnect" src="/image/VIETTINBANK.png" />
                   </a>
                   <a href="https://www.indovinabank.com.vn/" title="IVB">
-                    <img className="iconConnect" src="./image/IVB.png" />
+                    <img className="iconConnect" src="/image/IVB.png" />
                   </a>
                   <a href="http://123go.vn" title="123Go">
-                    <img className="iconConnect" src="./image/123go.png" />
+                    <img className="iconConnect" src="/image/123go.png" />
                   </a>
                   <a href="http://laban.vn" title="La Bàn">
-                    <img className="iconConnect" src="./image/laban.png" />
+                    <img className="iconConnect" src="/image/laban.png" />
                   </a>
                 </div>
               </div>
@@ -122,13 +119,13 @@ class Footer extends Component {
                       href="https://apps.apple.com/vn/app/tix-%C4%91%E1%BA%B7t-v%C3%A9-nhanh-nh%E1%BA%A5t/id615186197"
                       title="Apple App"
                     >
-                      <img className="iconApp" src="./image/apple-logo.png" />
+                      <img className="iconApp" src="/image/apple-logo.png" />
                     </a>
                     <a
                       href="https://play.google.com/store/apps/details?id=vn.com.vng.phim123"
                       title="Android App"
                     >
-                      <img className="iconApp" src="./image/android-logo.png" />
+                      <img className="iconApp" src="/image/android-logo.png" />
                     </a>
                   </div>
                   <div className="col-xs-6 textCenter">
@@ -137,13 +134,10 @@ class Footer extends Component {
                       href="https://www.facebook.com/tix.vn/"
                       title="Facebook social"
                     >
-                      <img
-                        className="iconApp"
-                        src="./image/facebook-logo.png"
-                      />
+                      <img className="iconApp" src="/image/facebook-logo.png" />
                     </a>
                     <a href="https://zalo.me/tixdatve" title="Zalo social">
-                      <img className="iconApp" src="./image/zalo-logo.png" />
+                      <img className="iconApp" src="/image/zalo-logo.png" />
                     </a>
                   </div>
                 </div>
@@ -154,7 +148,7 @@ class Footer extends Component {
               <div className="col-sm-1 col-xs-12 imgFooter">
                 <img
                   className="vngIcon"
-                  src="./image/zion-logo.jpg"
+                  src="/image/zion-logo.jpg"
                   style={{ borderRadius: 8 }}
                 />
               </div>
