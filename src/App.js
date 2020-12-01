@@ -6,9 +6,10 @@ import SignIn from "./pages/Signin/signin";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import { createAction } from "./redux/actions";
 import { connect } from "react-redux";
-import DetailMovie from "./pages/Details/detail"
-import SelectChair from "./pages/SelectChair/selectChair"
+import DetailMovie from "./pages/Details/detail";
+import SelectChair from "./pages/SelectChair/selectChair";
 import BookChair from "./pages/BookChair/BookChair";
+import Admin from "./pages/Admin";
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
           <Route exact path="/detail/:id" component={DetailMovie} />
           <Route exact path="/selectchair/:id" component={SelectChair} />
           <Route exact path="/bookChair" component={BookChair} />
+          <Route exact path="/admin" component={Admin} />
         </Switch>
       </BrowserRouter>
     );
