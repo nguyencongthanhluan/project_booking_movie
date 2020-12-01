@@ -1,0 +1,19 @@
+.detail {
+  padding-top: 50px;
+  padding-left: 30px;
+  font-size: 20px;
+  text-align: left;
+  .detail_info {
+    .item_1 {
+      line-height: 40px;
+      .tieude {
+        font-weight: 500;
+      }
+    }
+  }
+  .detail_content {
+    .tieude {
+      font-weight: 500;
+    }
+  }
+}

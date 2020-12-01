@@ -1,0 +1,123 @@
+@mixin content_p() {
+  p {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  h4 {
+    color: red;
+  }
+}
+.select_header {
+  padding-top: 50px;
+  display: inline-block;
+  display: flex;
+  text-align: center;
+  .selectCinema {
+    @include content_p();
+  }
+  .time {
+    margin-left: auto;
+    @include content_p();
+  }
+}
+.screens {
+  &_name {
+    img {
+      padding-top: 10px;
+      width: 100%;
+      height: 90px;
+    }
+  }
+
+  &_chair {
+    position: relative;
+    display: inline-block;
+    .chair_item {
+      font-size: 45px;
+      color: gray;
+      cursor: pointer;
+    }
+    .chair_number {
+      position: absolute;
+      top: 2%;
+      margin-left: 17px;
+      font-size: 9px;
+      font-weight: 600;
+      color: white;
+      padding-top: 6px;
+    }
+  }
+}
+.note_chair {
+  .note_item {
+    padding-left: 25px;
+    display: inline-grid;
+    text-align: center;
+    padding-top: 30px;
+    .chair_item {
+      font-size: 25px;
+      margin-left: 23px;
+    }
+    .content_chair {
+      display: inline-block;
+      color: #9b9b9b;
+      font-size: 14px;
+    }
+  }
+}
+
+@mixin span_payment() {
+  span:first-child {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  span:last-child {
+    font-size: 17px;
+    padding-left: 20px;
+  }
+}
+.payment {
+  padding-top: 50px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  .payment_content {
+    padding: 0 20px;
+    h3 {
+      text-align: center;
+      color: red;
+    }
+    .content_item {
+      @include span_payment();
+    }
+    .button_pay {
+      border: none;
+      background-color: orange;
+      border-radius: 4px;
+      padding: 5px 25px;
+      color: white;
+      margin-left: 37%;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+#chon_Ghe {
+  color: black;
+  width: 35px;
+  height: 35px;
+  margin: 8px;
+  border: 1px solid orange;
+  &:focus {
+    outline: none;
+  }
+}
+.cssGheDaDat {
+  background-color: red;
+}
+.cssGheDangChon {
+  background-color: green;
+}
+.cssGheVip {
+  background-color: orange;
+}

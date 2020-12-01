@@ -1,0 +1,91 @@
+$bg: #fb4226;
+.slide {
+  transition: all 1s;
+  img {
+    width: 90%;
+  }
+  .nameFilm {
+    span {
+      font-weight: 500;
+    }
+    .button_muave {
+      background: $bg;
+      border: none;
+      color: white;
+      width: 90%;
+      border-radius: 5px;
+      padding: 10px 0px;
+      position: relative;
+      top: -60px;
+      opacity: 0;
+      transition: all 0.5s;
+    }
+
+    .button_muave:focus {
+      outline: 0;
+    }
+    &:hover .button_muave {
+      opacity: 1 !important;
+    }
+  }
+  .intro1 {
+    position: relative;
+  }
+  .image {
+    height: 358px !important;
+  }
+  .intro_center {
+    width: 243px !important;
+    position: absolute;
+    top: 0%;
+    // left: 0px;
+    opacity: 1;
+    transition: all 1s;
+  }
+  .img_center {
+    width: 65px;
+    top: 35%;
+    // left: 88px;
+    margin-left: 101px;
+    position: absolute;
+    opacity: 0;
+  }
+  &:hover .img_center {
+    opacity: 1;
+  }
+  &:hover .intro_center {
+    background-color: #00000087;
+    opacity: 1;
+    height: 359px;
+    width: 100%;
+  }
+  &:hover .button_muave {
+    opacity: 1;
+  }
+}
+
+.button_item {
+  border: none;
+  background-color: white;
+  &:focus {
+    outline: none;
+  }
+}
+.button_previous {
+  position: relative;
+  left: -570px;
+  top: -330px;
+  .button_icon {
+    font-size: 55px;
+    color: #8080808a;
+  }
+}
+.button_next {
+  position: relative;
+  left: 550px;
+  top: -330px;
+  .button_icon {
+    font-size: 55px;
+    color: #8080808a;
+  }
+}

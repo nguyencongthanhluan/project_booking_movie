@@ -1,0 +1,85 @@
+.footer {
+  background-color: #222222;
+  .title {
+    color: white;
+    font-size: 80%;
+  }
+  .title_content {
+    .title_link {
+      font-size: 12px !important;
+      .link {
+        font-weight: 700;
+        white-space: nowrap;
+        color: #949494;
+        transition: all 0.2s;
+        line-height: 2.3;
+        text-decoration: none;
+      }
+    }
+  }
+  .linePartner {
+    margin-bottom: 15px;
+    //   padding-left: 0;
+    //   padding-right: 0;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      .iconConnect {
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        margin-right: 15px;
+      }
+    }
+  }
+  .hideOnMobile {
+    padding-right: 50px;
+  }
+  .textCenter {
+    text-align: center;
+  }
+  .iconApp {
+    background: 0 0;
+    height: 30px;
+    width: auto;
+    margin: 5px;
+  }
+  .hrFooter {
+    border-top: 1px solid #4a4a4a;
+  }
+  .imgFooter {
+    text-align: center;
+    padding: 0;
+  }
+  .infoFooter {
+    color: #fff;
+    white-space: nowrap;
+    font-size: 70%;
+
+    span:first-child {
+      color: #fff;
+    }
+    span {
+      display: block;
+      line-height: 1.8;
+      color: #949494;
+      font-size: 12px;
+      font-weight: 400;
+      a {
+        text-decoration: none;
+        color: #fb4226;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+    }
+  }
+  .imgBoCo {
+    width: 130px;
+    float: right;
+  }
+  .vngIcon {
+    width: 80px;
+    height: auto;
+  }
+}
