@@ -3,20 +3,23 @@ import "./selectChair.scss";
 import EventSeatRoundedIcon from "@material-ui/icons/EventSeatRounded";
 import { useState, useEffect } from "react";
 import BookChair from "../BookChair/BookChair";
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { listChair } from "./../../redux/actions/chairList";
 const SelectChair = (props) => {
   // const [listChairs, setListChair]= useState([])
+  const dispatch = useDispatch();
+  const { infoFilm, listChairs } = useSelector((state) => state.chair);
+  const { listBookChair } = useSelector((state) => state.listBookChair);
 
   const handleChoseChair = (ghe) => {
-    props.dispatch({
+    dispatch({
       type: "CHOOSE_CHAIR",
       payload: ghe,
     });
   };
 
   const renderChair = () => {
-    return props.listChairs.map((ghe, index) => {
+    return listChairs.map((ghe, index) => {
       let cssGhe = "";
       let disabled = false;
       if (ghe.loaiGhe === "Vip") {
@@ -26,7 +29,7 @@ const SelectChair = (props) => {
         cssGhe = "cssGheDaDat";
         disabled = true;
       }
-      let indexGheDangDat = props.listBookChair.findIndex(
+      let indexGheDangDat = listBookChair.findIndex(
         (gheDangDat) => gheDangDat.maGhe === ghe.maGhe
       );
       if (indexGheDangDat !== -1) {
@@ -79,13 +82,9 @@ const SelectChair = (props) => {
   useEffect(() => {
     //maLichChieu 40282
     // props.match.params.id
-    props.dispatch(listChair(props.match.params.id));
+    dispatch(listChair(props.match.params.id));
   }, []);
-  useEffect(() => {
-    //maLichChieu
-    // props.match.params.id
-    props.dispatch(listChair(props.match.params.id));
-  }, []);
+
   return (
     <div>
       <div className="container-fluid">
@@ -95,7 +94,7 @@ const SelectChair = (props) => {
               <div className="select_header ">
                 <div className="selectCinema">
                   <p>Rạp đang chọn</p>
-                  <h4>{props.infoFilm.tenRap}</h4>
+                  <h4>{infoFilm.tenRap}</h4>
                 </div>
                 <div className="time">
                   <p>Thời gian giữ ghế</p>
@@ -155,16 +154,4 @@ const SelectChair = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    listChairs: state.chair.listChair,
-    infoFilm: state.chair.infoFilm,
-    listBookChair: state.listBookChair.listBookChair || {
-      tenGhe: "",
-      giaVe: "",
-      maGhe: "",
-    },
-  };
-};
-
-export default connect(mapStateToProps)(SelectChair);
+export default SelectChair;

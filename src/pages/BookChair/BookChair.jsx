@@ -108,9 +108,9 @@ const BookChair = (props) => {
                 //lấy ra userlogin từ local
                 let userLogin = JSON.parse(localStorage.getItem("credential"));
 
-                //backen cần
+                //backend cần
                 let objBookTicket = {
-                  // props.match.params.maLichChieu
+                  // props.match.params.maLichChieu :
                   maLichChieu: "40282",
                   danhSachVe: props.listBookChair,
                   taiKhoanNguoiDung: userLogin.taiKhoan,
@@ -136,7 +136,7 @@ const BookChair = (props) => {
           <p
             id="thongbao"
             style={{ color: "red", fontSize: 20 }}
-            className="py-3"
+            className="py-3 px-3"
           ></p>
         </div>
       </div>
