@@ -102,7 +102,6 @@ const SelectChair = (props) => {
                   <div>
                     {minutes === 0 && seconds === 0 ? null : (
                       <h4>
-                        {" "}
                         {minutes} : {seconds < 10 ? `0${seconds}` : seconds}
                       </h4>
                     )}

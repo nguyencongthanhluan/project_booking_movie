@@ -12,22 +12,22 @@ class MovieSchedule extends Component {
           <ul className="nav nav-pills">
             <li className="nav-item">
               <a className="nav-link active" data-toggle="pill" href="#home">
-                Phim Sắp Chiếu
+                Phim Đang Chiếu
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" data-toggle="pill" href="#menu1">
-                Phim Đang Chiếu
+                Phim Sắp Chiếu
               </a>
             </li>
           </ul>
           {/* Tab panes */}
           <div className="tab-content">
             <div className="tab-pane container active" id="home">
-              <MovieScheduleItem />
+              <MoviePlaying />
             </div>
             <div className="tab-pane container fade" id="menu1">
-              <MoviePlaying />
+              <MovieScheduleItem />
             </div>
           </div>
         </section>
