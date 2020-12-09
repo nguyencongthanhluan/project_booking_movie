@@ -22,6 +22,8 @@ class Header extends Component {
     event.preventDefault();
     // Remove the token from localStorage
     localStorage.removeItem("credential");
+    localStorage.removeItem("token");
+    localStorage.removeItem("maloainguoidung");
     // Remove the user object from the Redux store
     this.props.dispatch(createAction("LOGOUT_USER"));
   };

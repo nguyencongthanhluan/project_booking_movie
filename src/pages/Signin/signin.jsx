@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { NavLink, Link } from "react-router-dom";
 import { connect } from "react-redux";
-import login from "../../redux/actions/user";
+import { login } from "../../redux/actions/user";
 
 class SignIn extends Component {
   render() {
@@ -28,9 +28,10 @@ class SignIn extends Component {
               matKhau: "",
             }}
             onSubmit={(values) => {
-              console.log(values);
               //dispatch lên server
               this.props.dispatch(login(values));
+
+              console.log(values);
             }}
             //   formikProps: xây dựng các hàm onChange,... đều chứa hết trong formikProps
             render={({ handleChange }) => (
@@ -59,10 +60,12 @@ class SignIn extends Component {
                   <ErrorMessage name="matKhau" />
                 </div>
                 <div className="text-center">
-                  <button className="btn btn-success ">Submit</button>
+                  <button type="submit" className="btn btn-success ">
+                    Submit
+                  </button>
                   <button type="button" className="btn btn-danger ml-2">
                     <NavLink to="/" className="a">
-                      Cancle
+                      Quay lại trang chủ
                     </NavLink>
                   </button>
                 </div>
@@ -77,7 +80,7 @@ class SignIn extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    creadentials: state.thongTinDangNhap,
+    creadentials: state.user.thongTinDangNhap,
   };
 };
 

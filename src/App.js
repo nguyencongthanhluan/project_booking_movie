@@ -6,9 +6,13 @@ import SignIn from "./pages/Signin/signin";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import { createAction } from "./redux/actions";
 import { connect } from "react-redux";
-import DetailMovie from "./pages/Details/detail"
-import SelectChair from "./pages/SelectChair/selectChair"
+import DetailMovie from "./pages/Details/detail";
+import SelectChair from "./pages/SelectChair/selectChair";
 import BookChair from "./pages/BookChair/BookChair";
+
+import { AdminTemplate } from "./pages/Admin/AdminTemplate";
+import Quanlynguoidung from "./pages/Admin/quanlynguoidung/quanlynguoidung";
+import Quanlyphim from "./pages/Admin/quanlyphim/quanlyphim";
 
 class App extends Component {
   render() {
@@ -22,6 +26,17 @@ class App extends Component {
           <Route exact path="/detail/:id" component={DetailMovie} />
           <Route exact path="/selectchair/:id" component={SelectChair} />
           <Route exact path="/bookChair" component={BookChair} />
+
+          <AdminTemplate
+            exact
+            path="/admin/quanlynguoidung"
+            component={Quanlynguoidung}
+          />
+          <AdminTemplate
+            exact
+            path="/admin/quanlyphim"
+            component={Quanlyphim}
+          />
         </Switch>
       </BrowserRouter>
     );

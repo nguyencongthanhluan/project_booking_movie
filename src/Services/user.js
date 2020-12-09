@@ -1,10 +1,10 @@
 import axios from "axios";
 class UserService {
-  signUp(data) {
+  signUp(user) {
     return axios({
       method: "POST",
       url: "https://movie0706.cybersoft.edu.vn/api/QuanLyNguoiDung/DangKy",
-      data,
+      data: user,
     });
   }
   signIn(user) {
