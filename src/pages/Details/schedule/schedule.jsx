@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
 class Schedule extends Component {
   render() {
     const { cumRapChieu } = this.props.cumRap;
@@ -26,20 +27,22 @@ class Schedule extends Component {
                         item.ngayChieuGioChieu.substr(8, 2) === this.props.id
                     )
                     .map((item, index) => (
-                      <button
+                      <NavLink
                         className="btn btn-light text-success mx-2"
                         key={index}
+                        to={`/selectchair/${item.maLichChieu}`}
                       >
                         {item.ngayChieuGioChieu?.substr(11, 5)}
-                      </button>
+                      </NavLink>
                     ))
                 : item.lichChieuPhim.map((item, index) => (
-                    <button
+                    <NavLink
                       className="btn btn-light text-success mx-2"
                       key={index}
+                      to={`/selectchair/${item.maLichChieu}`}
                     >
                       {item.ngayChieuGioChieu?.substr(11, 5)}
-                    </button>
+                    </NavLink>
                   ))}
             </div>
           </div>

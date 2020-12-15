@@ -66,15 +66,6 @@ class DetailMovie extends Component {
                 >
                   Trailer
                 </button>
-
-                <button className="btn btn-success ml-2">
-                  <Link
-                    to={`/selectchair/${this.props.movieDetails.maPhim}`}
-                    style={{ textDecoration: "none", color: "white" }}
-                  >
-                    MUA VÉ
-                  </Link>
-                </button>
               </div>
             </div>
             <div className="modal fade" id="modelMovie">
