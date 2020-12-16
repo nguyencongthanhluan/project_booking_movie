@@ -7,14 +7,12 @@ class Schedule extends Component {
     return (
       <div>
         {cumRapChieu?.map((item, index) => (
-          <div className="card text-left" key={index}>
+          <div
+            className="card text-left"
+            key={index}
+            style={{ overflowY: "auto", maxHeight: 250 }}
+          >
             <div>
-              <img
-                height="50px"
-                className="card-img-top mr-3"
-                src={item.hinhAnh}
-                alt="hinhAnh"
-              />
               <span style={{ fontSize: 20, fontWeight: "bold" }}>
                 {item.tenCumRap}
               </span>

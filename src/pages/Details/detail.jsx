@@ -34,6 +34,7 @@ class DetailMovie extends Component {
             height: 600,
             position: "relative",
           }}
+          className="introducing"
         >
           <div className="overlay"></div>
           <div className="container" style={{ padding: "5rem" }}>
@@ -111,7 +112,7 @@ class DetailMovie extends Component {
                         (item, index) => (
                           <li
                             key={index}
-                            className="my-4 d-flex py-4 "
+                            className="my-4 d-flex py-4 lilogo"
                             style={{
                               lineHeight: "70px",
                               borderBottom: "0.5px solid gray",
@@ -121,7 +122,12 @@ class DetailMovie extends Component {
                               this.handleHeThongRap(item);
                             }}
                           >
-                            <img height="70px" src={item.logo} alt="" />
+                            <img
+                              className="lilogo_img"
+                              height="70px"
+                              src={item.logo}
+                              alt=""
+                            />
                             <span className="ml-3 font-weight-bold">
                               {item.tenHeThongRap}
                             </span>

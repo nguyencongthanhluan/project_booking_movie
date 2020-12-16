@@ -37,7 +37,7 @@ const CinemaBook = (props) => {
 
   return (
     <div className="container pb-5">
-      <div className="col-sm-6 mx-auto pt-5 ">
+      <div className="col-sm-6 mx-md-auto pt-md-5 ">
         <ul className="logo_movie">{renderLogo()}</ul>
       </div>
       <div className="col-sm-12">

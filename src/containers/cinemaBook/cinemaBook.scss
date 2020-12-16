@@ -4,6 +4,9 @@
     padding: 0 20px;
     display: flex;
     text-decoration: none;
+    @media (max-width: 600px) {
+      padding: 0 8px;
+    }
     img {
       width: 50px;
     }
