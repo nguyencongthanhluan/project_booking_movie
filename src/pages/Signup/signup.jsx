@@ -26,7 +26,7 @@ class SignUp extends Component {
     userService
       .signUp(values)
       .then((res) => {
-        console.log(res);
+        window.history.back();
       })
       .catch((err) => {
         console.log(err.response.data);
