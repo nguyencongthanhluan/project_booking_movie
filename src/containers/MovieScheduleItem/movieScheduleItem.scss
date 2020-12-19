@@ -36,6 +36,9 @@ $bg: #fb4226;
   }
   .intro_center {
     width: 243px !important;
+    @media all and (max-width: 600px) {
+      width: 145px !important;
+    }
     position: absolute;
     top: 0%;
     // left: 0px;
@@ -47,6 +50,9 @@ $bg: #fb4226;
     top: 35%;
     // left: 88px;
     margin-left: 101px;
+    @media all and (max-width: 600px) {
+      margin-left: 55px;
+    }
     position: absolute;
     opacity: 0;
   }
