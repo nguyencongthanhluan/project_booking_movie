@@ -79,12 +79,21 @@ class Header extends Component {
                     </li>
                     <div className="dropdown-menu">
                       {this.props.credentials.hoTen ? (
-                        <button
-                          className="dropdown-item"
-                          onClick={this._handleLogOut}
-                        >
-                          Đăng xuất
-                        </button>
+                        <>
+                          <button
+                            className="dropdown-item"
+                            onClick={this._handleLogOut}
+                          >
+                            Đăng xuất
+                          </button>
+                          <NavLink
+                            to="/admin/quanlyphim"
+                            className="dropdown-item"
+                            onClick={this._handleLogOut}
+                          >
+                            Admin
+                          </NavLink>
+                        </>
                       ) : null}
                     </div>
                   </div>
