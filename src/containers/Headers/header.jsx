@@ -70,32 +70,29 @@ class Header extends Component {
             <div>
               <ul className="navbar-nav">
                 {this.props.credentials ? (
-                  <div className="dropdown">
-                    <li
-                      className="nav-item dropdown-toggle  "
-                      data-toggle="dropdown"
-                    >
-                      <span>Hi, {this.props.credentials.hoTen}</span>
-                    </li>
-                    <div className="dropdown-menu">
-                      {this.props.credentials.hoTen ? (
-                        <>
+                  <>
+                    <NavLink to="/admin/quanlyphim" className="text-dark">
+                      Admin
+                    </NavLink>
+                    <div className="dropdown ml-2">
+                      <li
+                        className="nav-item dropdown-toggle  "
+                        data-toggle="dropdown"
+                      >
+                        <span>Hi, {this.props.credentials.hoTen}</span>
+                      </li>
+                      <div className="dropdown-menu">
+                        {this.props.credentials.hoTen ? (
                           <button
                             className="dropdown-item"
                             onClick={this._handleLogOut}
                           >
                             Đăng xuất
                           </button>
-                          <NavLink
-                            to="/admin/quanlyphim"
-                            className="dropdown-item"
-                          >
-                            Admin
-                          </NavLink>
-                        </>
-                      ) : null}
+                        ) : null}
+                      </div>
                     </div>
-                  </div>
+                  </>
                 ) : (
                   <>
                     <li className="nav-item">
