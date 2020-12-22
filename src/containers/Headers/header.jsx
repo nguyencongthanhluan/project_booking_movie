@@ -89,7 +89,6 @@ class Header extends Component {
                           <NavLink
                             to="/admin/quanlyphim"
                             className="dropdown-item"
-                            onClick={this._handleLogOut}
                           >
                             Admin
                           </NavLink>
